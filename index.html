@@ -1,44 +1,24 @@
 
-    <html>
+
+<html>
   <head>
-    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@7.7.0/dist/aframe-extras.min.js"></script>
-    <script src="simple-navmesh-constraint.js"></script>
+    <script src="https://aframe.io/releases/1.8.0/aframe.min.js"></script>
   </head>
   <body>
-    
-    <!--apkartne-->
+    <a-scene>
 
-      <a-scene keyboard-shortcuts="" screenshot="" xr-mode-ui="" device-orientation-permission-ui="">
-      <a-sky color="#29282c " material="color: #1c1c1c"></a-sky>
+    <a-gltf-model id="gulosameica" src="/objeki/gulosameica.glb" position="0 1.68 0"></a-gltf-model>
+    <a-gltf-model id="tv" src="/objeki/tv.glb" position="0 3 0"></a-gltf-model>
 
-      <!--biblioteka-->
 
-      <a-gltf-model id="gulosameica" src="objeki/gulosameica.glb" position="0 1.68 0"></a-gltf-model>
+  <a-entity gltf-model="#tree"></a-entity>
+</a-scene>
 
-      <a-gltf-model id="tv" src="objeki/tv.glb" position="0 3 0"></a-gltf-model>
-      
-      <!-- PNG Image -->
-      <a-image src="bildes\apraksts.png" position="-3.38372 1.26506 3.66433" width="4" height="2" rotation="0 180 0" geometry="height: 0.75; width: 1.5"></a-image>
-      
-      <a-gltf-model src="#mt" gltf-model="objekti\MMTTMTsiena.glb" animation-mixer="" position="-40.47684 1.76 0" loop="false"
-      start event="animation-start" click="animation play" ></a-gltf-model>
-
-      <!--navmesh-->
-     <a-gltf-model id="navmesh" src="#navmesh-glb" position="0 1.95 0" navmesh="" gltf-model="objekti\mesh.glb" visible="false"></a-gltf-model>
-     
-      <!-- light -->
-
-     
-      <a-light type="directional" light="type: point; castShadow: true" position="-15.70149 3.09151 -21.51906" intensity="0.2" shadow-camera-automatic="#objects"></a-light>
-
-      <!--kustiba-->
-
-      <a-entity id="rig" movement-controls="speed: 0.2" rotation="0 80 0" position="-6.04763 0.01 3.00713" gamepad-controls="" trackpad-controls="" keyboard-controls="" touch-controls="">
-        <a-entity camera="" look-controls="pointerLockEnabled: true" simple-navmesh-constraint="navmesh: #navmesh; height: 1.10" position="2.037826675625702 1.272443270595411 2.1884047237203976" rotation="-0.3437746770784651 182.88812820575822 0">
-        </a-entity>
-      </a-entity>
-      
+      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
+      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+      <a-sky color="#ECECEC"></a-sky>
     </a-scene>
   </body>
 </html>
